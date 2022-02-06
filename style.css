@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #eef0f4;
+}
+.gallery__top,.gallery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:30px;
+    padding-top: 10px;
+}
+.gallery__top{
+    position: sticky;
+    top: 0;
+    background-color: #eef0f4;
+    width: 100vw;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    z-index: 2;
+}
+
+.gallery__top >h1{
+    margin-bottom: 1rem;
+}
+.gallery__top >p {
+    font-size: 1em;
+    color: gray;
+    width: 600px;
+    word-wrap: break-word;
+    text-align: center;
+    
+}
+.image__Container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1.2rem;
+    padding: 30px;
+    min-height: 70vh;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+}
+.EachImage__Container{
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    overflow: hidden;
+}
+.EachImage__Container>img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    cursor: pointer;
+    transition: all ease .5s;
+}
+.EachImage__Container>img:hover{
+    transform: scale(1.1);
+}
+
+
+.preview{
+    position: relative;
+       
+}
+.previewContainer{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+
+.preview >img{
+    display: inline-block;
+    /* width: 500px;
+    height: 500px; */
+    box-shadow: 0 0 20px rgba(0,0,0,.75);
+    margin-top: 1rem;
+    user-select: none;
+    border-radius: 10px;
+}
+.preview > span{
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    color: red;
+    font-size: 2rem;
+    font-weight: 900;
+    cursor: pointer;
+    width: fit-content;
+    border: none;
+    user-select: none;
+    transition: all .2s ease;
+}
+.preview > span:hover{
+    
+    transform: scale(1.2);
+}
+.opa{
+    opacity: .5;
+}
+.d-none{
+    display: none;
+}
+#searchBar{
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    
+    color: #052a4e;
+    outline: none;
+    padding: 1rem 1.15rem;
+    width: 25rem;
+    border-radius: 3px;
+    border: 4px solid gray;
+}
